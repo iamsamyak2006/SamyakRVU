@@ -2,12 +2,12 @@ import streamlit as st
 import seaborn as sns
 import plotly.express as px
 
-# --- Custom Styling (Background, Fonts, etc.) ---
+# --- Custom Styling (Light Cyan Gradient Background, Fonts, etc.) ---
 st.markdown("""
     <style>
         body {
-            background: linear-gradient(to right, #FF7E5F, #feb47b);  /* Gradient background */
-            color: #fff;  /* White text */
+            background: linear-gradient(to right, #a1c4fd, #c2e9fb);  /* Light Cyan Gradient */
+            color: #333;  /* Dark text for contrast */
             font-family: 'Helvetica', sans-serif;  /* Clean font */
         }
         .main {
@@ -17,17 +17,18 @@ st.markdown("""
         .stTitle {
             font-size: 2.5rem;  /* Larger title */
             font-weight: 600;
+            color: #333;
         }
         .stSubheader {
             font-size: 1.5rem;  /* Larger subheader */
-            color: #ffffff;
+            color: #333;
         }
         .stMarkdown {
             font-size: 1.1rem;
-            color: #ffffff;
+            color: #333;
         }
         .stButton>button {
-            background-color: #FF7E5F;  /* Button color */
+            background-color: #a1c4fd;  /* Button color matching the gradient */
             color: white;
             font-weight: bold;
             border-radius: 5px;
