@@ -10,16 +10,6 @@ import pandas as pd
 st.title("Interactive Visualizations with Plotly and Streamlit")
 
 
-# --- Input for Author Information ---
-st.sidebar.header("Visualization skill workshop - Plotly")
-name = st.sidebar.text_input("Samyak Jain")
-usn = st.sidebar.text_input("12")
-instructor_name = st.sidebar.text_input("Course Intructor Name")
-
-
-
-
-
 # --- Load Dataset ---
 tips = sns.load_dataset('tips')  # Loading the tips dataset
 
@@ -33,7 +23,7 @@ st.write(tips.head())
 st.subheader("Task 1: Bar Chart - Average Tip by Day")
 # Bar Chart: Average Tip by Day with color for each day
 fig2 = px.bar(
-    dataset, x='day', y='tip', color='day',
+    tips, x='day', y='tip', color='day',
     title='average tip by day',
     labels={'tip': 'Average tip(s)', 'day': 'Day of the Week'},
     template='plotly_white', #clean white backrground
@@ -44,7 +34,7 @@ st.plotly_chart(fig2)  # Display the chart in Streamlit
 
 # --- Task 2: Interactive Scatter Chart
 fig4 = px.scatter(
-    dataset, x='total_bill', y='tip', color='sex',
+    tips, x='total_bill', y='tip', color='sex',
     title='Total Bill vs Tip(colored by Gender)',
     labels={'total_bill': 'total bill($)', 'tip': 'Tip($)'},
     template='plotly_dark', #cool dark backrground
